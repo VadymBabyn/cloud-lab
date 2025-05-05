@@ -6,6 +6,10 @@ app = Flask(__name__)
 data = {}
 id_counter = 1
 
+@app.route('/')
+def home():
+    return 'Вітаю! Flask-додаток працює 🎉'
+
 @app.route('/items', methods=['POST'])
 def create_item():
     global id_counter
