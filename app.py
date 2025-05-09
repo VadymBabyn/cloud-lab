@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 # Параметри для підключення до Render PostgreSQL (через змінні середовища)
 conn = psycopg2.connect(
-    host=os.environ.get("DB_HOST"),
-    database=os.environ.get("DB_NAME"),
-    user=os.environ.get("DB_USER"),
-    password=os.environ.get("DB_PASSWORD"),
-    port=5432
+    host=os.getenv("DB_HOST"),
+    port=os.getenv("DB_PORT"),
+    dbname=os.getenv("DB_NAME"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD")
 )
 
 @app.route('/')
