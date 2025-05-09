@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <title>Редагування</title>
+</head>
+<body>
+    <h1>Редагувати нотатку</h1>
+    <form method="post">
+        <input type="text" name="title" value="{{ note[1] }}" required><br>
+        <textarea name="content">{{ note[2] }}</textarea><br>
+        <button type="submit">Зберегти</button>
+    </form>
+    <a href="/">Назад</a>
+</body>
+</html>
